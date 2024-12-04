@@ -20,7 +20,6 @@
 
           # Formatters
           treefmt2
-          mdformat
           alejandra
 
           # Others
