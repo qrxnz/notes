@@ -1,19 +1,19 @@
----
-title: "Social Media Preview Cards"
----
+______________________________________________________________________
 
-A lot of social media platforms can display a rich preview for your website when sharing a link (most notably, a cover image, a title and a description). Quartz automatically handles most of this for you with reasonable defaults, but for more control, you can customize these by setting [[social images#Frontmatter Properties]].
+## title: "Social Media Preview Cards"
+
+A lot of social media platforms can display a rich preview for your website when sharing a link (most notably, a cover image, a title and a description). Quartz automatically handles most of this for you with reasonable defaults, but for more control, you can customize these by setting \[\[social images#Frontmatter Properties\]\].
 Quartz can also dynamically generate and use new cover images for every page to be used in link previews on social media for you. To get started with this, set `generateSocialImages: true` in `quartz.config.ts`.
 
 ## Showcase
 
-After enabling `generateSocialImages` in `quartz.config.ts`, the social media link preview for [[authoring content | Authoring Content]] looks like this:
+After enabling `generateSocialImages` in `quartz.config.ts`, the social media link preview for \[\[authoring content | Authoring Content\]\] looks like this:
 
 | Light                               | Dark                               |
 | ----------------------------------- | ---------------------------------- |
-| ![[social-image-preview-light.png]] | ![[social-image-preview-dark.png]] |
+| !\[\[social-image-preview-light.png\]\] | !\[\[social-image-preview-dark.png\]\] |
 
-For testing, it is recommended to use [opengraph.xyz](https://www.opengraph.xyz/) to see what the link to your page will look like on various platforms (more info under [[social images#local testing]]).
+For testing, it is recommended to use [opengraph.xyz](https://www.opengraph.xyz/) to see what the link to your page will look like on various platforms (more info under \[\[social images#local testing\]\]).
 
 ## Customization
 
@@ -30,11 +30,11 @@ generateSocialImages: {
 }
 ```
 
----
+______________________________________________________________________
 
 ### Frontmatter Properties
 
-> [!tip] Hint
+> \[!tip\] Hint
 >
 > Overriding social media preview properties via frontmatter still works even if `generateSocialImages` is disabled.
 
@@ -47,13 +47,13 @@ The following properties can be used to customize your link previews:
 
 The `socialImage` property should contain a link to an image relative to `quartz/static`. If you have a folder for all your images in `quartz/static/my-images`, an example for `socialImage` could be `"my-images/cover.png"`.
 
-> [!info] Info
+> \[!info\] Info
 >
 > The priority for what image will be used for the cover image looks like the following: `frontmatter property > generated image (if enabled) > default image`.
 >
 > The default image (`quartz/static/og-image.png`) will only be used as a fallback if nothing else is set. If `generateSocialImages` is enabled, it will be treated as the new default per page, but can be overwritten by setting the `socialImage` frontmatter property for that page.
 
----
+______________________________________________________________________
 
 ### Fully customized image generation
 
@@ -61,7 +61,7 @@ You can fully customize how the images being generated look by passing your own 
 
 It is recommended to write your own image components in `quartz/util/og.tsx` or any other `.tsx` file, as passing them to the config won't work otherwise. An example of the default image component can be found in `og.tsx` in `defaultImage()`.
 
-> [!tip] Hint
+> \[!tip\] Hint
 >
 > Satori only supports a subset of all valid CSS properties. All supported properties can be found in their [documentation](https://github.com/vercel/satori#css).
 
@@ -79,7 +79,7 @@ imageStructure: (
 
 Now, you can let your creativity flow and design your own image component! For reference and some cool tips, you can check how the markup for the default image looks.
 
-> [!example] Examples
+> \[!example\] Examples
 >
 > Here are some examples for markup you may need to get started:
 >
@@ -95,7 +95,7 @@ Now, you can let your creativity flow and design your own image component! For r
 >
 >   Detailed in the Fonts chapter below
 
----
+______________________________________________________________________
 
 ### Fonts
 
@@ -109,7 +109,7 @@ export const myImage: SocialImageOptions["imageStructure"] = (...) => {
 }
 ```
 
-> [!example]- Local fonts
+> \[!example\]- Local fonts
 >
 > For cases where you use a local fonts under `static` folder, make sure to set the correct `@font-face` in `custom.scss`
 >
@@ -186,9 +186,9 @@ The following example will generate images that look as follows:
 
 | Light                                      | Dark                                      |
 | ------------------------------------------ | ----------------------------------------- |
-| ![[custom-social-image-preview-light.png]] | ![[custom-social-image-preview-dark.png]] |
+| !\[\[custom-social-image-preview-light.png\]\] | !\[\[custom-social-image-preview-dark.png\]\] |
 
-This example (and the default template) use colors and fonts from your theme specified in the quartz config. Fonts get passed in as a prop, where `fonts[0]` will contain the header font and `fonts[1]` will contain the body font (more info in the [[#fonts]] section).
+This example (and the default template) use colors and fonts from your theme specified in the quartz config. Fonts get passed in as a prop, where `fonts[0]` will contain the header font and `fonts[1]` will contain the body font (more info in the \[\[#fonts\]\] section).
 
 ```tsx
 import { SatoriOptions } from "satori/wasm"
@@ -273,7 +273,7 @@ export const customImage: SocialImageOptions["imageStructure"] = (
 }
 ```
 
-> [!example]- Advanced example
+> \[!example\]- Advanced example
 >
 > The following example includes a customized social image with a custom background and formatted date.
 >

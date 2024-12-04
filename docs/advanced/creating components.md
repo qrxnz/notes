@@ -1,8 +1,8 @@
----
-title: Creating your own Quartz components
----
+______________________________________________________________________
 
-> [!warning]
+## title: Creating your own Quartz components
+
+> \[!warning\]
 > This guide assumes you have experience writing JavaScript and are familiar with TypeScript.
 
 Normally on the web, we write layout code using HTML which looks something like the following:
@@ -70,7 +70,7 @@ export type QuartzComponentProps = {
 }
 ```
 
-- `fileData`: Any metadata [[making plugins|plugins]] may have added to the current page.
+- `fileData`: Any metadata \[\[making plugins|plugins\]\] may have added to the current page.
   - `fileData.slug`: slug of the current page.
   - `fileData.frontmatter`: any frontmatter parsed.
 - `cfg`: The `configuration` field in `quartz.config.ts`.
@@ -116,7 +116,7 @@ export default (() => {
 }) satisfies QuartzComponentConstructor
 ```
 
-> [!warning]
+> \[!warning\]
 > Quartz does not use CSS modules so any styles you declare here apply _globally_. If you only want it to apply to your component, make sure you use specific class names and selectors.
 
 ### Scripts and Interactivity
@@ -142,14 +142,14 @@ export default (() => {
 }) satisfies QuartzComponentConstructor
 ```
 
-> [!hint]
+> \[!hint\]
 > For those coming from React, Quartz components are different from React components in that it only uses JSX for templating and layout. Hooks like `useEffect`, `useState`, etc. are not rendered and other properties that accept functions like `onClick` handlers will not work. Instead, do it using a regular JS script that modifies the DOM element directly.
 
 As the names suggest, the `.beforeDOMLoaded` scripts are executed _before_ the page is done loading so it doesn't have access to any elements on the page. This is mostly used to prefetch any critical data.
 
 The `.afterDOMLoaded` script executes once the page has been completely loaded. This is a good place to setup anything that should last for the duration of a site visit (e.g. getting something saved from local storage).
 
-If you need to create an `afterDOMLoaded` script that depends on _page specific_ elements that may change when navigating to a new page, you can listen for the `"nav"` event that gets fired whenever a page loads (which may happen on navigation if [[SPA Routing]] is enabled).
+If you need to create an `afterDOMLoaded` script that depends on _page specific_ elements that may change when navigating to a new page, you can listen for the `"nav"` event that gets fired whenever a page loads (which may happen on navigation if \[\[SPA Routing\]\] is enabled).
 
 ```ts
 document.addEventListener("nav", () => {
@@ -209,7 +209,7 @@ import YourComponent from "./YourComponent"
 export { ArticleTitle, Content, Darkmode, YourComponent }
 ```
 
-Then, you can use it like any other component in `quartz.layout.ts` via `Component.YourComponent()`. See the [[configuration#Layout|layout]] section for more details.
+Then, you can use it like any other component in `quartz.layout.ts` via `Component.YourComponent()`. See the \[\[configuration#Layout|layout\]\] section for more details.
 
 As Quartz components are just functions that return React components, you can compositionally use them in other Quartz components.
 
@@ -230,5 +230,5 @@ export default (() => {
 }) satisfies QuartzComponentConstructor
 ```
 
-> [!hint]
+> \[!hint\]
 > Look in `quartz/components` for more examples of components in Quartz as reference for your own components!

@@ -1,13 +1,13 @@
----
-title: Making your own plugins
----
+______________________________________________________________________
 
-> [!warning]
+## title: Making your own plugins
+
+> \[!warning\]
 > This part of the documentation will assume you have working knowledge in TypeScript and will include code snippets that describe the interface of what Quartz plugins should look like.
 
 Quartz's plugins are a series of transformations over content. This is illustrated in the diagram of the processing pipeline below:
 
-![[quartz transform pipeline.png]]
+!\[\[quartz transform pipeline.png\]\]
 
 All plugins are defined as a function that takes in a single parameter for options `type OptionType = object | undefined` and return an object that corresponds to the type of plugin it is.
 
@@ -23,9 +23,9 @@ type QuartzPluginInstance =
 The following sections will go into detail for what methods can be implemented for each plugin type. Before we do that, let's clarify a few more ambiguous types:
 
 - `BuildCtx` is defined in `quartz/ctx.ts`. It consists of
-  - `argv`: The command line arguments passed to the Quartz [[build]] command
-  - `cfg`: The full Quartz [[configuration]]
-  - `allSlugs`: a list of all the valid content slugs (see [[paths]] for more information on what a `ServerSlug` is)
+  - `argv`: The command line arguments passed to the Quartz \[\[build\]\] command
+  - `cfg`: The full Quartz \[\[configuration\]\]
+  - `allSlugs`: a list of all the valid content slugs (see \[\[paths\]\] for more information on what a `ServerSlug` is)
 - `StaticResources` is defined in `quartz/resources.tsx`. It consists of
   - `css`: a list of CSS style definitions that should be loaded. A CSS style is described with the `CSSResource` type which is also defined in `quartz/resources.tsx`. It accepts either a source URL or the inline content of the stylesheet.
   - `js`: a list of scripts that should be loaded. A script is described with the `JSResource` type which is also defined in `quartz/resources.tsx`. It allows you to define a load time (either before or after the DOM has been loaded), whether it should be a module, and either the source URL or the inline content of the script.
@@ -53,7 +53,7 @@ All transformer plugins must define at least a `name` field to register the plug
 
 Normally for both `remark` and `rehype`, you can find existing plugins that you can use to . If you'd like to create your own `remark` or `rehype` plugin, checkout the [guide to creating a plugin](https://unifiedjs.com/learn/guide/create-a-plugin/) using `unified` (the underlying AST parser and transformer library).
 
-A good example of a transformer plugin that borrows from the `remark` and `rehype` ecosystems is the [[plugins/Latex|Latex]] plugin:
+A good example of a transformer plugin that borrows from the `remark` and `rehype` ecosystems is the \[\[plugins/Latex|Latex\]\] plugin:
 
 ```ts title="quartz/plugins/transformers/latex.ts"
 import remarkMath from "remark-math"
@@ -248,7 +248,7 @@ This is a thin wrapper around writing to the appropriate output folder and ensur
 
 If you are creating an emitter plugin that needs to render components, there are three more things to be aware of:
 
-- Your component should use `getQuartzComponents` to declare a list of `QuartzComponents` that it uses to construct the page. See the page on [[creating components]] for more information.
+- Your component should use `getQuartzComponents` to declare a list of `QuartzComponents` that it uses to construct the page. See the page on \[\[creating components\]\] for more information.
 - You can use the `renderPage` function defined in `quartz/components/renderPage.tsx` to render Quartz components into HTML.
 - If you need to render an HTML AST to JSX, you can use the `htmlToJsx` function from `quartz/util/jsx.ts`. An example of this can be found in `quartz/components/pages/Content.tsx`.
 
@@ -301,5 +301,5 @@ export const ContentPage: QuartzEmitterPlugin = () => {
 
 Note that it takes in a `FullPageLayout` as the options. It's made by combining a `SharedLayout` and a `PageLayout` both of which are provided through the `quartz.layout.ts` file.
 
-> [!hint]
+> \[!hint\]
 > Look in `quartz/plugins` for more examples of plugins in Quartz as reference for your own plugins!

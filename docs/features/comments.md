@@ -1,12 +1,15 @@
----
+______________________________________________________________________
+
 title: Comments
 tags:
-  - component
----
+
+- component
+
+______________________________________________________________________
 
 Quartz also has the ability to hook into various providers to enable readers to leave comments on your site.
 
-![[giscus-example.png]]
+!\[\[giscus-example.png\]\]
 
 As of today, only [Giscus](https://giscus.app/) is supported out of the box but PRs to support other providers are welcome!
 
@@ -14,21 +17,21 @@ As of today, only [Giscus](https://giscus.app/) is supported out of the box but 
 
 ### Giscus
 
-First, make sure that the [[setting up your GitHub repository|GitHub]] repository you are using for your Quartz meets the following requirements:
+First, make sure that the \[\[setting up your GitHub repository|GitHub\]\] repository you are using for your Quartz meets the following requirements:
 
 1. The **repository is [public](https://docs.github.com/en/github/administering-a-repository/managing-repository-settings/setting-repository-visibility#making-a-repository-public)**, otherwise visitors will not be able to view the discussion.
-2. The **[giscus](https://github.com/apps/giscus) app is installed**, otherwise visitors will not be able to comment and react.
-3. The **Discussions feature is turned on** by [enabling it for your repository](https://docs.github.com/en/github/administering-a-repository/managing-repository-settings/enabling-or-disabling-github-discussions-for-a-repository).
+1. The **[giscus](https://github.com/apps/giscus) app is installed**, otherwise visitors will not be able to comment and react.
+1. The **Discussions feature is turned on** by [enabling it for your repository](https://docs.github.com/en/github/administering-a-repository/managing-repository-settings/enabling-or-disabling-github-discussions-for-a-repository).
 
 Then, use the [Giscus site](https://giscus.app/#repository) to figure out what your `repoId` and `categoryId` should be. Make sure you select `Announcements` for the Discussion category.
 
-![[giscus-repo.png]]
+!\[\[giscus-repo.png\]\]
 
-![[giscus-discussion.png]]
+!\[\[giscus-discussion.png\]\]
 
 After entering both your repository and selecting the discussion category, Giscus will compute some IDs that you'll need to provide back to Quartz. You won't need to manually add the script yourself as Quartz will handle that part for you but will need these values in the next step!
 
-![[giscus-results.png]]
+!\[\[giscus-results.png\]\]
 
 Finally, in `quartz.layout.ts`, edit the `afterBody` field of `sharedPageComponents` to include the following options but with the values you got from above:
 

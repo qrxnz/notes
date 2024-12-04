@@ -1,13 +1,16 @@
----
+______________________________________________________________________
+
 title: RoamFlavoredMarkdown
 tags:
-  - plugin/transformer
----
 
-This plugin provides support for [Roam Research](https://roamresearch.com) compatibility. See [[Roam Research Compatibility]] for more information.
+- plugin/transformer
 
-> [!note]
-> For information on how to add, remove or configure plugins, see the [[Configuration#Plugins|Configuration]] page.
+______________________________________________________________________
+
+This plugin provides support for [Roam Research](https://roamresearch.com) compatibility. See \[\[Roam Research Compatibility\]\] for more information.
+
+> \[!note\]
+> For information on how to add, remove or configure plugins, see the \[\[Configuration#Plugins|Configuration\]\] page.
 
 This plugin accepts the following configuration options:
 

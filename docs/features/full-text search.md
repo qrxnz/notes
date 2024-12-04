@@ -1,8 +1,11 @@
----
+______________________________________________________________________
+
 title: Full-text Search
 tags:
-  - component
----
+
+- component
+
+______________________________________________________________________
 
 Full-text search in Quartz is powered by [Flexsearch](https://github.com/nextapps-de/flexsearch). It's fast enough to return search results in under 10ms for Quartzs as large as half a million words.
 
@@ -12,8 +15,8 @@ To search content by tags, you can either press `⌘`/`ctrl` + `shift` + `K` or 
 
 This component is also keyboard accessible: Tab and Shift+Tab will cycle forward and backward through search results and Enter will navigate to the highlighted result (first result by default). You are also able to navigate search results using `ArrowUp` and `ArrowDown`.
 
-> [!info]
-> Search requires the `ContentIndex` emitter plugin to be present in the [[configuration]].
+> \[!info\]
+> Search requires the `ContentIndex` emitter plugin to be present in the \[\[configuration\]\].
 
 ### Indexing Behaviour
 

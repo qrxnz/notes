@@ -1,16 +1,19 @@
----
+______________________________________________________________________
+
 title: "Explorer"
 tags:
-  - component
----
+
+- component
+
+______________________________________________________________________
 
 Quartz features an explorer that allows you to navigate all files and folders on your site. It supports nested folders and is highly customizable.
 
-By default, it shows all folders and files on your page. To display the explorer in a different spot, you can edit the [[layout]].
+By default, it shows all folders and files on your page. To display the explorer in a different spot, you can edit the \[\[layout\]\].
 
-Display names for folders get determined by the `title` frontmatter field in `folder/index.md` (more detail in [[authoring content | Authoring Content]]). If this file does not exist or does not contain frontmatter, the local folder name will be used instead.
+Display names for folders get determined by the `title` frontmatter field in `folder/index.md` (more detail in \[\[authoring content | Authoring Content\]\]). If this file does not exist or does not contain frontmatter, the local folder name will be used instead.
 
-> [!info]
+> \[!info\]
 > The explorer uses local storage by default to save the state of your explorer. This is done to ensure a smooth experience when navigating to different pages.
 >
 > To clear/delete the explorer state from local storage, delete the `fileTree` entry (guide on how to delete a key from local storage in chromium based browsers can be found [here](https://docs.devolutions.net/kb/general-knowledge-base/clear-browser-local-storage/clear-chrome-local-storage/)). You can disable this by passing `useSavedState: false` as an argument.
@@ -43,8 +46,8 @@ When passing in your own options, you can omit any or all of these fields if you
 Want to customize it even more?
 
 - Removing explorer: remove `Component.Explorer()` from `quartz.layout.ts`
-  - (optional): After removing the explorer component, you can move the [[table of contents | Table of Contents]] component back to the `left` part of the layout
-- Changing `sort`, `filter` and `map` behavior: explained in [[#Advanced customization]]
+  - (optional): After removing the explorer component, you can move the \[\[table of contents | Table of Contents\]\] component back to the `left` part of the layout
+- Changing `sort`, `filter` and `map` behavior: explained in \[\[#Advanced customization\]\]
 - Component:
   - Wrapper (Outer component, generates file tree, etc): `quartz/components/Explorer.tsx`
   - Explorer node (recursive, either a folder or a file): `quartz/components/ExplorerNode.tsx`
@@ -91,9 +94,9 @@ Component.Explorer({
 })
 ```
 
----
+______________________________________________________________________
 
-You can pass your own functions for `sortFn`, `filterFn` and `mapFn`. All functions will be executed in the order provided by the `order` option (see [[#Customization]]). These functions behave similarly to their `Array.prototype` counterpart, except they modify the entire `FileNode` tree in place instead of returning a new one.
+You can pass your own functions for `sortFn`, `filterFn` and `mapFn`. All functions will be executed in the order provided by the `order` option (see \[\[#Customization\]\]). These functions behave similarly to their `Array.prototype` counterpart, except they modify the entire `FileNode` tree in place instead of returning a new one.
 
 For more information on how to use `sort`, `filter` and `map`, you can check [Array.prototype.sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort), [Array.prototype.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) and [Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
 
@@ -105,7 +108,7 @@ filterFn: (node: FileNode) => boolean
 mapFn: (node: FileNode) => void
 ```
 
-> [!tip]
+> \[!tip\]
 > You can check if a `FileNode` is a folder or a file like this:
 >
 > ```ts
@@ -192,7 +195,7 @@ Component.Explorer({
 
 ## Advanced examples
 
-> [!tip]
+> \[!tip\]
 > When writing more complicated functions, the `layout` file can start to look very cramped.
 > You can fix this by defining your functions in another file.
 >
@@ -242,7 +245,7 @@ Component.Explorer({
 
 ### Putting it all together
 
-In this example, we're going to customize the explorer by using functions from examples above to [[#Add emoji prefix | add emoji prefixes]], [[#remove-list-of-elements-filter| filter out some folders]] and [[#use-sort-to-put-files-first | sort with files above folders]].
+In this example, we're going to customize the explorer by using functions from examples above to \[\[#Add emoji prefix | add emoji prefixes\]\], \[\[#remove-list-of-elements-filter| filter out some folders\]\] and \[\[#use-sort-to-put-files-first | sort with files above folders\]\].
 
 ```ts title="quartz.layout.ts"
 Component.Explorer({

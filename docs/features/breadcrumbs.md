@@ -1,8 +1,11 @@
----
+______________________________________________________________________
+
 title: "Breadcrumbs"
 tags:
-  - component
----
+
+- component
+
+______________________________________________________________________
 
 Breadcrumbs provide a way to navigate a hierarchy of pages within your site using a list of its parent folders.
 
@@ -26,7 +29,7 @@ Component.Breadcrumbs({
 
 When passing in your own options, you can omit any or all of these fields if you'd like to keep the default value for that field.
 
-You can also adjust where the breadcrumbs will be displayed by adjusting the [[layout]] (moving `Component.Breadcrumbs()` up or down)
+You can also adjust where the breadcrumbs will be displayed by adjusting the \[\[layout\]\] (moving `Component.Breadcrumbs()` up or down)
 
 Want to customize it even more?
 

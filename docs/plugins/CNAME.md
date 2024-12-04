@@ -1,17 +1,20 @@
----
+______________________________________________________________________
+
 title: CNAME
 tags:
-  - plugin/emitter
----
+
+- plugin/emitter
+
+______________________________________________________________________
 
 This plugin emits a `CNAME` record that points your subdomain to the default domain of your site.
 
 If you want to use a custom domain name like `quartz.example.com` for the site, then this is needed.
 
-See [[hosting|Hosting]] for more information.
+See \[\[hosting|Hosting\]\] for more information.
 
-> [!note]
-> For information on how to add, remove or configure plugins, see the [[configuration#Plugins|Configuration]] page.
+> \[!note\]
+> For information on how to add, remove or configure plugins, see the \[\[configuration#Plugins|Configuration\]\] page.
 
 This plugin has no configuration options.
 

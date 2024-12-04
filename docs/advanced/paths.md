@@ -1,6 +1,6 @@
----
-title: Paths in Quartz
----
+______________________________________________________________________
+
+## title: Paths in Quartz
 
 Paths are pretty complex to reason about because, especially for a static site generator, they can come from so many places.
 

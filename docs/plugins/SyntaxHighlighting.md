@@ -1,13 +1,16 @@
----
+______________________________________________________________________
+
 title: "SyntaxHighlighting"
 tags:
-  - plugin/transformer
----
 
-This plugin is used to add syntax highlighting to code blocks in Quartz. See [[syntax highlighting]] for more information.
+- plugin/transformer
 
-> [!note]
-> For information on how to add, remove or configure plugins, see the [[configuration#Plugins|Configuration]] page.
+______________________________________________________________________
+
+This plugin is used to add syntax highlighting to code blocks in Quartz. See \[\[syntax highlighting\]\] for more information.
+
+> \[!note\]
+> For information on how to add, remove or configure plugins, see the \[\[configuration#Plugins|Configuration\]\] page.
 
 This plugin accepts the following configuration options:
 

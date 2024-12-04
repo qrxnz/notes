@@ -1,8 +1,11 @@
----
+______________________________________________________________________
+
 title: AliasRedirects
 tags:
-  - plugin/emitter
----
+
+- plugin/emitter
+
+______________________________________________________________________
 
 This plugin emits HTML redirect pages for aliases and permalinks defined in the frontmatter of content files.
 
@@ -25,8 +28,8 @@ The emitter supports the following aliases:
 - `aliases`
 - `alias`
 
-> [!note]
-> For information on how to add, remove or configure plugins, see the [[configuration#Plugins|Configuration]] page.
+> \[!note\]
+> For information on how to add, remove or configure plugins, see the \[\[configuration#Plugins|Configuration\]\] page.
 
 This plugin has no configuration options.
 

@@ -1,8 +1,11 @@
----
+______________________________________________________________________
+
 title: Callouts
 tags:
-  - feature/transformer
----
+
+- feature/transformer
+
+______________________________________________________________________
 
 Quartz supports the same Admonition-callout syntax as Obsidian.
 
@@ -18,12 +21,12 @@ This includes
 
 See [documentation on supported types and syntax here](https://help.obsidian.md/Editing+and+formatting/Callouts).
 
-> [!warning]
-> Wondering why callouts may not be showing up even if you have them enabled? You may need to reorder your plugins so that [[ObsidianFlavoredMarkdown]] is _after_ [[SyntaxHighlighting]].
+> \[!warning\]
+> Wondering why callouts may not be showing up even if you have them enabled? You may need to reorder your plugins so that \[\[ObsidianFlavoredMarkdown\]\] is _after_ \[\[SyntaxHighlighting\]\].
 
 ## Customization
 
-The callouts are a functionality of the [[ObsidianFlavoredMarkdown]] plugin. See the plugin page for how to enable or disable them.
+The callouts are a functionality of the \[\[ObsidianFlavoredMarkdown\]\] plugin. See the plugin page for how to enable or disable them.
 
 You can edit the icons by customizing `quartz/styles/callouts.scss`.
 
@@ -42,55 +45,55 @@ By default, custom callouts are handled by applying the `note` style. To make fa
 }
 ```
 
-> [!warning]
+> \[!warning\]
 > Don't forget to ensure that the SVG is URL encoded before putting it in the CSS. You can use tools like [this one](https://yoksel.github.io/url-encoder/) to help you do that.
 
 ## Showcase
 
-> [!info]
+> \[!info\]
 > Default title
 
-> [!question]+ Can callouts be _nested_?
+> \[!question\]+ Can callouts be _nested_?
 >
-> > [!todo]- Yes!, they can. And collapsed!
+> > \[!todo\]- Yes!, they can. And collapsed!
 > >
-> > > [!example] You can even use multiple layers of nesting.
+> > > \[!example\] You can even use multiple layers of nesting.
 
-> [!note]
+> \[!note\]
 > Aliases: "note"
 
-> [!abstract]
+> \[!abstract\]
 > Aliases: "abstract", "summary", "tldr"
 
-> [!info]
+> \[!info\]
 > Aliases: "info"
 
-> [!todo]
+> \[!todo\]
 > Aliases: "todo"
 
-> [!tip]
+> \[!tip\]
 > Aliases: "tip", "hint", "important"
 
-> [!success]
+> \[!success\]
 > Aliases: "success", "check", "done"
 
-> [!question]
+> \[!question\]
 > Aliases: "question", "help", "faq"
 
-> [!warning]
+> \[!warning\]
 > Aliases: "warning", "attention", "caution"
 
-> [!failure]
+> \[!failure\]
 > Aliases: "failure", "missing", "fail"
 
-> [!danger]
+> \[!danger\]
 > Aliases: "danger", "error"
 
-> [!bug]
+> \[!bug\]
 > Aliases: "bug"
 
-> [!example]
+> \[!example\]
 > Aliases: "example"
 
-> [!quote]
+> \[!quote\]
 > Aliases: "quote", "cite"

@@ -1,16 +1,16 @@
----
-title: Setting up your GitHub repository
----
+______________________________________________________________________
 
-First, make sure you have Quartz [[index#🪴 Get Started|cloned and setup locally]].
+## title: Setting up your GitHub repository
+
+First, make sure you have Quartz \[\[index#🪴 Get Started|cloned and setup locally\]\].
 
 Then, create a new repository on GitHub.com. Do **not** initialize the new repository with `README`, license, or `gitignore` files.
 
-![[github-init-repo-options.png]]
+!\[\[github-init-repo-options.png\]\]
 
 At the top of your repository on GitHub.com's Quick Setup page, click the clipboard to copy the remote repository URL.
 
-![[github-quick-setup.png]]
+!\[\[github-quick-setup.png\]\]
 
 In your terminal of choice, navigate to the root of your Quartz folder. Then, run the following commands, replacing `REMOTE-URL` with the URL you just copied from the previous step.
 
@@ -31,12 +31,12 @@ Then, you can sync the content to upload it to your repository. This is a helper
 npx quartz sync --no-pull
 ```
 
-> [!warning]- `fatal: --[no-]autostash option is only valid with --rebase`
+> \[!warning\]- `fatal: --[no-]autostash option is only valid with --rebase`
 > You may have an outdated version of `git`. Updating `git` should fix this issue.
 
 In future updates, you can simply run `npx quartz sync` every time you want to push updates to your repository.
 
-> [!hint] Flags and options
+> \[!hint\] Flags and options
 > For full help options, you can run `npx quartz sync --help`.
 >
 > Most of these have sensible defaults but you can override them if you have a custom setup:
