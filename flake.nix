@@ -25,7 +25,6 @@
 
           # Others
           just
-          watchexec
         ];
       };
   };
