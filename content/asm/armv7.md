@@ -5,11 +5,9 @@ tags:
 - asm
 ---
 
-## armv7
+## amv7 as expamples
 
-### amv7 as expamples
-
-#### simple math
+### simple math
 
 ```s
 .global _start
@@ -37,7 +35,7 @@ _start:
 
 	add r1, r0, r2 ; r1 = r0 + r2
 ```
-#### ldr - pseudo-instruction loads a register
+### ldr - pseudo-instruction loads a register
 
 ```
 .global _start
@@ -52,7 +50,7 @@ var1: .word 5
 var2: .word 6
 ```
 
-#### str - load and Store with register offset
+### str - load and Store with register offset
 
 ```
 STR <source_register>, [<address_register>]
@@ -72,4 +70,40 @@ _start:
 .data
 var1: .word 5
 var2: .word 6
+```
+### Bitwise
+
+#### AND
+
+```s
+.global _start
+_start:
+	mov r0, #66
+	and r1, r0 #38
+```
+
+#### OR
+
+```s
+.global _start
+_start:
+	mov r0, #66
+	or r1, r0 #38
+```
+
+#### EOR (XOR)
+
+```s
+.global _start
+_start:
+	mov r0, #66
+	eor r1, r0 #38
+```
+
+#### MVN (NOT)
+```s
+.global _start
+_start:
+	mov r0, #66
+	mvn r1, r0
 ```
