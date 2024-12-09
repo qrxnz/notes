@@ -7,9 +7,9 @@ tags:
 
 ## armv7 data types
 
-- Byte --> 8 bits
-- Halfword --> 16 bits
-- Word --> 32 bits
+- Byte --> `8 bits`
+- Halfword --> `16 bits`
+- Word --> `32 bits`
 
 ## amv7 as expamples
 
