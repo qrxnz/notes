@@ -5,15 +5,15 @@ tags:
 - asm
 ---
 
-## armv7 data types
+## Data types
 
 - Byte --> `8 bits`
 - Halfword --> `16 bits`
 - Word --> `32 bits`
 
-## amv7 as expamples
+## Expamples
 
-### simple math
+### Simple math
 
 ```s
 .global _start
@@ -41,7 +41,7 @@ _start:
 
 	add r1, r0, r2 ; r1 = r0 + r2
 ```
-### ldr - pseudo-instruction loads a register
+### LDR - pseudo-instruction loads a register
 
 ```
 .global _start
@@ -56,7 +56,7 @@ var1: .word 5
 var2: .word 6
 ```
 
-### str - load and Store with register offset
+### STR - load and Store with register offset
 
 ```
 STR <source_register>, [<address_register>]
