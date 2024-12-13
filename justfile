@@ -1,4 +1,4 @@
-build:
+serve:
     npx quartz build --serve
 
-run: build
+run: serve
